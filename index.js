@@ -8,7 +8,7 @@ const PORT = 4000;
 //mongoose connection
 
 const connectDB = async () => {
-    const conn = await mongoose.connect('mongodb+srv://sam2020:sam2020@learninnode.kgkco.mongodb.net/crm', {
+    const conn = await mongoose.connect(process.env.MONGODB_URI, {
         useNewUrlParser:true,
         useCreateIndex:true,
         useFindAndModify:false,
